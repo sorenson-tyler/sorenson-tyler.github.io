@@ -1,0 +1,58 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #5f91e2;
+}
+a:hover {
+  text-decoration: underline;
+}
+li {
+  list-style-type: none;
+}
+button {
+  border-radius: 4px;
+  background-color: white;
+  border: 1.5px solid #5f91e2;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+button:hover {
+  border: 3px solid #5f91e2;
+  cursor: pointer;
+}
+
+#masterView {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.home-button {
+  float: right;
+  margin: 21.4333px;
+}
+.header-text {
+  display: inline-block;
+}
+.container {
+  margin: 15px 15px 15px 15px;
+}
+.topics-list {
+  padding: 0;
+}
+.topic {
+  height: 100px;
+  width: 200px;
+  display: inline-grid;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 15px;
+  border: 1.5px solid #5f91e2;
+}
+.header {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.subTopic {
+
+}
