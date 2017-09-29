@@ -1,58 +1,111 @@
 html {
   font-family: 'Roboto', sans-serif;
 }
+
 a {
   text-decoration: none;
   color: #5f91e2;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 li {
   list-style-type: none;
 }
+
 button {
   border-radius: 4px;
-  background-color: white;
-  border: 1.5px solid #5f91e2;
+  background-color: transparent;
+  box-shadow: 5px 5px 3px #ddd;
   padding: 5px 15px;
   font-size: 16px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
 }
+
+.buttonHeader {
+  color: white;
+  box-shadow: none;
+  border: 2px solid white;
+}
+
+.buttonHeader:hover {
+  box-shadow: none;
+  color: #ddd;
+  border: 2px solid #ddd;
+}
+
 button:hover {
-  border: 3px solid #5f91e2;
+  box-shadow: 3px 3px 3px #ddd;
   cursor: pointer;
 }
 
 #masterView {
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 50px;
 }
+
 .home-button {
   float: right;
   margin: 21.4333px;
 }
+
 .header-text {
   display: inline-block;
+  padding-left: 15px;
+  color: white;
 }
+
 .container {
   margin: 15px 15px 15px 15px;
 }
+
 .topics-list {
   padding: 0;
+  display: inline;
 }
-.topic {
-  height: 100px;
+
+.topic-header {
+  min-height: 70px;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 3px 3px 7px rgb(149, 150, 153);
   width: 200px;
-  display: inline-grid;
-  border-radius: 4px;
   padding: 15px;
+  /*margin: 15px;*/
+}
+.topic-container {
+  display: inline-grid;
+  vertical-align: top;
   margin: 15px;
-  border: 1.5px solid #5f91e2;
+}
+.topic-container:hover {
+  box-shadow: 3px 3px 15px rgb(149, 150, 153);
+  cursor: pointer;
 }
 .header {
   width: 100%;
-  border-bottom: 2px solid black;
+  background-color: rgb(68, 105, 143);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-.subTopic {
 
+.topic-image {
+  width: 80px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
 }
+
+.topic-title {
+  background-color: #ddd;
+  min-height: 30px;
+  border-radius: 0 0 2px 2px;
+  width: 200px;
+  box-shadow: 3px 3px 7px rgb(149, 150, 153);
+  padding: 15px;
+  /*margin: 15px;*/
+}
+
+.subTopic {}
