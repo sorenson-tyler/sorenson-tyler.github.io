@@ -1,5 +1,6 @@
 html {
   font-family: 'Roboto', sans-serif;
+  min-width: 656px;
 }
 
 a {
@@ -41,7 +42,7 @@ button:hover {
 #masterView {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .home-button {
