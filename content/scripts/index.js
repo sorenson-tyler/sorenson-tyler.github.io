@@ -1,5 +1,6 @@
 var view;
 var onHomePage = true;
+var inputValue;
 
 window.onload = function () {
   view = document.getElementById("masterView");
@@ -62,6 +63,16 @@ function circle() {
 }
 
 //Week 5
+function saveInputValue() {
+  var inputElement = document.getElementById("input");
+  inputValue = inputElement.value;
+}
+
+function getInputValue() {
+  var displayElement = document.getElementById('inputResult');
+  displayElement.innerHTML = inputValue;
+}
+
 function saveValue() {
   var inputElement = document.getElementById("localStorageInput");
   var value = inputElement.value;
