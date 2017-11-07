@@ -115,4 +115,29 @@ box-shadow: 0 2px 2px 0 rgba(0,0,0,.14);
   border-radius: 4px;
   border: 1.5px solid #ddd;
   padding: 10px;
+  width: 50%;
+}
+
+.transform-image {
+  height: 100px;
+  width: auto;
+}
+
+.rotate {
+  transform-origin: middle;
+  transform: rotate(90deg);
+}
+
+.scale {
+  transform-origin: middle;
+  transform: scale(2, 2);
+}
+
+.scew {
+  transform-origin: middle;
+  transform: skew(30deg, 30deg);
+}
+
+.spin {
+  transform: translateX(50px) rotate(50deg) translateY(15px);
 }
