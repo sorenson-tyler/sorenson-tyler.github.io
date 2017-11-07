@@ -80,10 +80,43 @@ function saveValue() {
   localStorage.setItem('demo', value);
 }
 
+function saveArrayValue() {
+  var inputElement = document.getElementById("localStorageArrayInput");
+  var values = inputElement.value;
+  var array = [];
+  var arrayNode = "";
+  var arrayLength = 0;
+  for (var i = 0; i < values.length; i++) {
+    var currentCharacter = values[i];
+    if(currentCharacter != ',' && currentCharacter != ' ') {
+      arrayNode += currentCharacter;
+      continue;
+    } else if (arrayNode != ""){
+      array[arrayLength] = arrayNode;
+      arrayLength++;
+      arrayNode = "";
+    }
+  }
+
+  if(arrayNode != "") {
+    array[arrayLength] = arrayNode;
+  }
+
+  localStorage.setItem('array', JSON.stringify(array));
+}
+
 function getValue() {
   var value = localStorage.getItem('demo');
 
   var displayElement = document.getElementById('localStorageResult');
+  displayElement.innerHTML = JSON.parse(value);
+}
+
+function getArrayValue() {
+  var value = localStorage.getItem('array');
+
+  var displayElement = document.getElementById('arrayLocalStorage');
+
   displayElement.innerHTML = value;
 }
 
@@ -103,4 +136,15 @@ function removeChild1() {
 
   var listElement = document.getElementById("list1");
   listElement.parentNode.removeChild(createdElement);
+}
+
+//Week 9
+function addClass(className, elementId) {
+  if(elementId == null) {
+    elementId = className;
+  }
+
+  var element = document.getElementById(elementId);
+
+  element.className += " " + className;
 }
