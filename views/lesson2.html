@@ -1,0 +1,98 @@
+<div class="topic-page" style="margin-bottom: 15px;">
+  <div class="topic-page-header" style="border-radius: 0px;">
+    <h2>JavaScript Objects - Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
+  </div>
+
+  <div class="subTopic">
+    <h3>Object Creation Functions</h3>
+    A new JavaScript object can be created in two different ways. The first way
+    is by simply declaring your object with the <code>{}</code> characters. If
+    I wanted an object of fruits created this way I would do this:
+    <code>var fruit = {'apple', 'orange', 'banana'};</code>
+
+    The second way to create a new object is using an object creation function.
+    This is not the prefered method of creating objects and you should use the
+    first method almost every time. <code>var fruits = new Object();</code> this
+    would create a new fruits object the same way <code>var fruits = {};</code>
+    would.
+  </div>
+  <hr/>
+
+  <div class="subTopic">
+    <h3>Inheritance</h3>
+    Inheritance in JavaScript allows a child object to use/call/inherite it's
+    prototype's methods and properties. This can be done with built in JavaScript
+    prototypes, but it can also be done with custom prototypes you might create yourself.
+
+    An example of a build in JavaScript prototype is the Date class <code>new Date()</code>. When
+    an object is created with the Date constructor it automatically inherites the properties and Methods
+    contained within the Date prototype. Some of the methods included in the Date prototype are <code>getDate(); getFullYear();</code>
+    and many more.
+
+    An example of a custom JavaScript prototype is a Student class
+    <code>
+      function Student(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.isStudent = true;
+      }
+    </code> As you can see when the Student class is created the first and last name
+    parameters get set within the Student object and the property <code>isStudent</code>
+    is set to true. We can then create a new Student like this:
+    <code>
+      var firstStudent = new Student('Joe', 'Smith');
+
+      var firstStudentFirstName = firstStudent.firstName;
+    </code>
+    We can create a new student and access one of it's properties <code>firstName</code>
+  </div>
+  <hr/>
+
+  <div class="subTopic">
+    <h3>Properties</h3>
+    Just like the example we showed earlier <code>
+      var firstStudent = new Student('Joe', 'Smith');
+
+      var firstStudentFirstName = firstStudent.firstName;
+    </code> We can create a new Student and access it's parameters using the dot notation.
+    Properties are just variables or values that are stored within the Objects
+    prototype. The three properties we created inside the Student object are
+    <code>firstName, lastName, isStudent</code>
+  </div>
+  <hr/>
+
+  <div class="subTopic">
+    <h3>Methods</h3>
+    Methods are a lot like properties, but of course they are methods not variables.
+    We can add a method to a prototype like this:
+    <code>
+      function Student(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.isStudent = true;
+        this.wasLate = false;
+
+        this.attendence(timeArrived) {
+          var classStartTime = new Date();
+          if(timeArrived > classStartTime) {
+            this.wasLate = true;
+          }
+        }
+      }
+    </code> We created the <code>attendence</code> method that takes a parameter
+    indicating when the student arrived and if that is later than the <code>classStartTime</code>
+    the student is marked as late.
+  </div>
+  <hr/>
+
+  <div class="subTopic">
+    <h3>Instantiation</h3>
+    Instantiation is the action of creating a new object from an existing prototype.
+    I showed how this was done earlier with this snippet <code>
+      var firstStudent = new Student('Joe', 'Smith');
+
+      var firstStudentFirstName = firstStudent.firstName;
+    </code> The <code>firstStudent</code> object is instantiated with the <code>new Student('Joe', 'Smith')</code>
+  </div>
+  <hr/>
+</div>
