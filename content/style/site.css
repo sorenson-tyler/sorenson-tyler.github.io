@@ -40,6 +40,10 @@ button {
   cursor: pointer;
 }
 
+.cssSwitch {
+  color: red;
+}
+
 #masterView {
   margin-left: 10%;
   margin-right: 10%;

@@ -2,7 +2,7 @@ var view;
 var onHomePage = true;
 var inputValue;
 
-window.onload = function () {
+window.onload = function() {
   view = document.getElementById("masterView");
   loadHeader();
 };
@@ -44,7 +44,7 @@ function navigate(url, homePage) {
 }
 
 function showHomeButton() {
-  if(onHomePage) {
+  if (onHomePage) {
     var homeButton = document.getElementById("homeButton");
     homeButton.style.display = "none";
   } else {
@@ -88,17 +88,17 @@ function saveArrayValue() {
   var arrayLength = 0;
   for (var i = 0; i < values.length; i++) {
     var currentCharacter = values[i];
-    if(currentCharacter != ',' && currentCharacter != ' ') {
+    if (currentCharacter != ',' && currentCharacter != ' ') {
       arrayNode += currentCharacter;
       continue;
-    } else if (arrayNode != ""){
+    } else if (arrayNode != "") {
       array[arrayLength] = arrayNode;
       arrayLength++;
       arrayNode = "";
     }
   }
 
-  if(arrayNode != "") {
+  if (arrayNode != "") {
     array[arrayLength] = arrayNode;
   }
 
@@ -140,11 +140,63 @@ function removeChild1() {
 
 //Week 9
 function addClass(className, elementId) {
-  if(elementId == null) {
+  if (elementId == null) {
     elementId = className;
   }
 
   var element = document.getElementById(elementId);
 
   element.className += " " + className;
+}
+
+function switchClass() {
+  var element = document.getElementById('cssSwitch');
+
+  if (element.className == 'cssSwitch') {
+    element.className = '';
+  } else {
+    element.className = 'cssSwitch';
+  }
+}
+
+function ajaxFile() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("ajax").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+
+function stringify() {
+  var fruit = {
+    name: 'apple',
+    color: 'red'
+  };
+
+  var fruitString = JSON.stringify(fruit);
+
+  var element = document.getElementById('stringify');
+
+  element.innerHTML = fruitString;
+}
+
+function parse() {
+  var fruitString = '{"name":"apple","color":"red"}';
+
+  var fruit = JSON.parse(fruitString);
+
+  var element = document.getElementById('parse');
+
+  element.innerHTML = fruit;
+
+  var element = document.getElementById('name');
+
+  element.innerHTML = fruit.name;
+
+  var element = document.getElementById('color');
+
+  element.innerHTML = fruit.color;
 }
