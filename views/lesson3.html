@@ -5,11 +5,32 @@
 
   <div class="subTopic">
     <h3>JSONParse</h3>
+    This method parses through a JSON string and creates the JavaScript
+    object described by the string. JSON string example: {"name":"apple","color":"red"}
+    if we click the button below we can parse this string into a JS object.<br/>
+
+    <button class="btn" onclick="parse();">Parse string</button><br/><br/>
+    Object: <div id="parse"></div><br/>
+    Name: <div id="name"></div><br/>
+    Color: <div id="color"></div><br/>
   </div>
   <hr/>
 
   <div class="subTopic">
     <h3>Stringify</h3>
+    Converts the JavaScript object into a JSON string equivalent.
+    JavaScript object example:
+    <code>
+      var fruit = {
+        name: 'apple',
+        color: 'red'
+      };
+    </code>
+    If we click the button below we will see the strigified version of the above JS object.<br/>
+    <button class="btn" onclick="stringify();">Stringify object</button><br/><br/>
+    <div id="stringify">
+
+    </div>
   </div>
   <hr/>
 
