@@ -25,6 +25,22 @@
     <code>transition-property</code> list. Here is an example of an animation for background
     and border-radius<br/>
     <div class="box3" style="width:100px;height:100px"></div><br/><br/>
+
+    <h3>Animations</h3>
+    Animations are something we can add onto a transition to give us more control
+    over the process of the transition. This is done by using <code>keyframes</code>
+    and <code>animation</code>. Our <code>keyframes</code> allow us to define
+    how the object will be translated at many different points. We use percentages
+    to define the different points we would like to control during our animation.
+    Once we have defined a <code>keyframe</code> we can attach it to an element with
+    the <code>animation-name</code> property which will coordinate with the keyframe
+    name. From there we have a number of extra properties we can choose to use if we
+    wish. <code>animation-duration</code> is the number of seconds our animation will last
+    <code>animation-timing-function</code> tells us whether we want a linear transition,
+    ease-in, etc. <code>animation-delay</code> is the time until the animation will start in
+    seconds. <code>animation-iteration-count</code> allows us to define how many times we
+    would like our animation to run, could be a specific number or it could be infinite. <br/>
+    <div class="box4" style="width:100px;height:100px;background:#ff7b29"></div><br/><br/>
   </div>
 </div>
 <style>
@@ -48,4 +64,23 @@
     background: #ff7b29;
     border-radius: 50%;
   }
+  @keyframes background {
+  0% {
+    background: #ff7b29;
+  }
+  50% {
+    background: blue;
+  }
+  100% {
+    background: #2db34a;
+  }
+}
+.box4:hover {
+  animation-name: background;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
 </style>
