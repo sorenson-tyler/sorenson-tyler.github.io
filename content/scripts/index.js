@@ -200,3 +200,19 @@ function parse() {
 
   element.innerHTML = fruit.color;
 }
+
+function trigger(id) {
+  var element = document.getElementById(id);
+
+  element.style.backgroundColor = "blue";
+}
+
+function transition(enter) {
+  var element = document.getElementById('box2');
+
+if(enter) {
+  element.style.background = "#ff7b29";
+} else {
+  element.style.background = "#2db34a";
+}
+}

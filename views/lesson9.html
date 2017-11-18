@@ -1,0 +1,51 @@
+<div class="topic-page" style="margin-bottom: 15px;">
+  <div class="topic-page-header" style="border-radius: 0px;">
+    <h2>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2>
+
+    <h3>CSS Transition</h3>
+    A change made to an element after a change in state. In the example below
+    the change in state is the hover style attribute. The transition is defined
+    for the base class of the element with its <code>transition-property: background</code>
+    meaning we will be transisitoning the background, its <code>transition-duration: 1s</code>
+    meaning we will be transisitoning between two values for 1 second, and the
+    <code>transition-timing-function: linear</code> meaning we will transition at a linear
+    speed for the defined time. This is an example of a CSS transition trigger, since we
+    will be using the <code>.box:hover</code> CSS class to switch animations.<br/>
+    <div class="box" style="width:100px;height:100px"></div><br/><br/>
+
+    <h3>JS Transition</h3>
+    We can do the same thing using JS instead of the <code>:hover</code> attribute. All
+    we need to do is add the <code>onmouseover</code> and <code>onmouseout</code> Events
+    to our elements and change the <code>background</code><br/>
+    <div class="box2" id="box2" onmouseover="transition(true)" onmouseout="transition(false)"
+    style="width:100px;height:100px"></div><br/><br/>
+
+    <h3>Multiple Transitions</h3>
+    We can combine two transitions into a single animation by adding another property to the
+    <code>transition-property</code> list. Here is an example of an animation for background
+    and border-radius<br/>
+    <div class="box3" style="width:100px;height:100px"></div><br/><br/>
+  </div>
+</div>
+<style>
+  .box, .box2 {
+    background: #2db34a;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+  }
+  .box:hover {
+    background: #ff7b29;
+  }
+  .box3 {
+    background: #2db34a;
+    border-radius: 6px;
+    transition-property: background, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+  }
+  .box3:hover {
+    background: #ff7b29;
+    border-radius: 50%;
+  }
+</style>

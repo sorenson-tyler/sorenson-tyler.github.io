@@ -1,0 +1,31 @@
+<div class="topic-page" style="margin-bottom: 15px;">
+  <div class="topic-page-header" style="border-radius: 0px;">
+    <h2>Standard JavaScript Events Including those for Mobile Devices
+      ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h2>
+
+      <div>
+        <h3>onclick</h3>
+        <div id="box" onclick="trigger('box')" style="background-color: red; width:100px;height:100px"></div>
+      </div>
+      <div>
+        <h3>onmouseover</h3>
+        <div id="box1" onmouseover="trigger('box1')" style="background-color: red; width:100px;height:100px"></div>
+      </div>
+      <div>
+        <h3>onmouseout</h3>
+        <div id="box2" onmouseout="trigger('box2')" style="background-color: red; width:100px;height:100px"></div>
+      </div>
+      <div>
+        <h3>onkeydown (Must receive focus first)</h3>
+        <div id="box3" tabindex="1" onkeydown="trigger('box3')" style="background-color: red; width:100px;height:100px"></div>
+      </div>
+      <div>
+        <h3>onload (Does not work when using AJAX to update page)</h3>
+        <div id="box4" onload="trigger('box4')" style="background-color: red; width:100px;height:100px"></div>
+      </div>
+      <div>
+        <h3>touch</h3>
+        <div id="box4" touchstart="trigger('box4')" style="background-color: red; width:100px;height:100px"></div>
+      </div>
+  </div>
+</div>
