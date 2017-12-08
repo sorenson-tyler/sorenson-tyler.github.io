@@ -166,7 +166,7 @@ function ajaxFile() {
      document.getElementById("ajax").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
   xhttp.send();
 }
 
